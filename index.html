@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verhuur Gebouw</title>
+    <title>Over ons Schooltje</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,12 +13,12 @@
             <img src="images/logo.png" alt="Logo">
         </div>
         <nav>
-            <ul>
-                <li><a href="over-ons.html">Over ons Schooltje</a></li>
+            <ul id="menu">
+                <li><a href="over-ons.html" class="active">Over ons Schooltje</a></li>
                 <li><a href="ruimte-huren.html">Ruimte huren</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
                 <li><a href="oldtimer-opslag.html">Oldtimer opslag verhuur</a></li>
             </ul>
+            <div id="underline"></div>
         </nav>
         <div class="contact-button">
             <a href="contact.html">Contact</a>
@@ -25,11 +26,26 @@
     </header>
 
     <main>
-        <!-- Jouw inhoud hier -->
+        <div class="hero">
+            <img src="images/Over-ons_TempHeader.jpg" alt="Over ons Schooltje">
+            <div class="overlay"></div>
+            <h1>Over ons Schooltje</h1>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <h2>Over ons</h2>
+                <p>In Hooge Zwaluwe, gemeente Drimmelen, op de grens van de Biesbosch staat een voormalig schoolgebouw uit 1870. Het gebouw is een gemeentelijk monument en recent gerenoveerd. Het gebouw is jarenlang de thuisbasis geweest voor de koninklijke muziek vereniging “Concordia”. Het gebouw heeft een garage beschikbaar als de stalling van oldtimers en boten en heeft een tuinhuis voor bijeenkomsten en in de toekomst als Airbnb. Hooge Zwaluwe ligt aan de rand van de Biesbosch en in het natuurgebied de Zonzeel. Er zijn prachtige wandel- en fietsroutes.</p>
+            </div>
+            <div class="content-right">
+                <img src="images/Temp_Afbeelding_OverOns.jpg" alt="Afbeelding">
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Verhuur Gebouw. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

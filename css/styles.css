@@ -11,6 +11,7 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #fff; /* Achtergrondkleur van de header */
+    position: relative; /* Voor de underline positionering */
 }
 
 .logo img {
@@ -23,6 +24,7 @@ nav ul {
     margin: 0;
     display: flex;
     gap: 20px; /* Afstand tussen de menu-items */
+    position: relative;
 }
 
 nav ul li {
@@ -33,7 +35,6 @@ nav ul li a {
     text-decoration: none;
     color: #666; /* Grijze kleur voor de menu-items */
     font-size: 16px;
-    font-family: Arial, sans-serif; /* Lettertype van de menu-items */
     font-weight: bold; /* Menu-items dikgedrukt maken */
     transition: color 0.3s ease; /* Soepele overgang voor de kleurverandering bij hover */
 }
@@ -43,8 +44,15 @@ nav ul li a:hover {
 }
 
 nav ul li a.active {
-    border-bottom: 2px solid #4D563A; /* Kleur van de lijn onder de actieve menukop */
     color: #4D563A; /* Kleur van de actieve menukop */
+}
+
+#underline {
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    background: #4D563A; /* Kleur van de lijn */
+    transition: left 0.3s ease, width 0.3s ease;
 }
 
 .contact-button a {
@@ -54,7 +62,6 @@ nav ul li a.active {
     text-decoration: none;
     border-radius: 5px; /* Ronde hoeken van de contactknop */
     font-size: 16px;
-    font-family: Arial, sans-serif; /* Lettertype van de contactknop */
     font-weight: bold; /* Contactknop dikgedrukt maken */
     transition: background-color 0.3s ease; /* Soepele overgang voor de achtergrondkleur bij hover */
 }
@@ -117,14 +124,12 @@ nav ul li a.active {
 }
 
 .content-left h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 24px; /* Grotere tekstgrootte voor de kop */
     font-weight: 700; /* Dikker fontgewicht voor de kop */
     margin-bottom: 20px; /* Ruimte onder de kop */
 }
 
 .content-left p {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px; /* Standaard tekstgrootte voor de paragraaf */
     font-weight: 400; /* Normaal fontgewicht voor de paragraaf */
 }

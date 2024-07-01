@@ -1,8 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #4D563A; /* Achtergrondkleur van de volledige pagina */
+    background-color: #fff; /* Achtergrondkleur van de volledige pagina */
 }
 
 header {
@@ -96,16 +96,37 @@ nav ul li a.active {
 .content {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Verticaal centreren van de inhoud */
     padding: 20px;
     background-color: white; /* Achtergrondkleur van de inhoudssectie */
-    margin: 20px;
+    margin: 20px auto; /* Auto margin voor centrering en ruimte aan de zijkanten */
     border-radius: 5px; /* Ronde hoeken van de inhoudssectie */
+    max-width: 1200px; /* Maximale breedte van de inhoudssectie */
+    height: 400px; /* Vast hoogte voor de inhoudssectie om verticale centrering mogelijk te maken */
 }
 
 .content-left, .content-right {
     flex: 1;
     margin: 10px;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Verticaal centreren van de tekst in het linkervak */
+}
+
+.content-left h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px; /* Grotere tekstgrootte voor de kop */
+    font-weight: 700; /* Dikker fontgewicht voor de kop */
+    margin-bottom: 20px; /* Ruimte onder de kop */
+}
+
+.content-left p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Standaard tekstgrootte voor de paragraaf */
+    font-weight: 400; /* Normaal fontgewicht voor de paragraaf */
 }
 
 .content-right img {

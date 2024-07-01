@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #4D563A; /* Kleur van de tweede afbeelding */
+    background-color: #ffffff; /* Achtergrondkleur van de volledige pagina */
 }
 
 header {
@@ -10,11 +10,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: #fff; /* Achtergrondkleur van de header */
 }
 
 .logo img {
-    height: 50px;
+    height: 50px; /* Hoogte van het logo in de header */
 }
 
 nav ul {
@@ -22,7 +22,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Afstand tussen de menu-items */
 }
 
 nav ul li {
@@ -31,28 +31,80 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #666;
+    color: #666; /* Grijze kleur voor de menu-items */
     font-size: 16px;
+    font-family: Arial, sans-serif; /* Lettertype van de menu-items */
+    font-weight: bold; /* Menu-items dikgedrukt maken */
+    transition: color 0.3s ease; /* Soepele overgang voor de kleurverandering bij hover */
+}
+
+nav ul li a:hover {
+    color: #000; /* Zwarte kleur bij hover */
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #4D563A; /* Kleur van de lijn onder de actieve menukop */
+    color: #4D563A; /* Kleur van de actieve menukop */
 }
 
 .contact-button a {
-    background-color: #4D563A; /* Kleur van de tweede afbeelding */
-    color: #fff;
+    background-color: #4D563A; /* Achtergrondkleur van de contactknop */
+    color: #fff; /* Tekstkleur van de contactknop */
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Ronde hoeken van de contactknop */
     font-size: 16px;
+    font-family: Arial, sans-serif; /* Lettertype van de contactknop */
+    font-weight: bold; /* Contactknop dikgedrukt maken */
+    transition: background-color 0.3s ease; /* Soepele overgang voor de achtergrondkleur bij hover */
 }
 
 .contact-button a:hover {
-    background-color: #3e4532; /* Donkerdere kleur voor hover effect */
+    background-color: #3e4532; /* Donkerdere kleur voor hover effect op de contactknop */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white; /* Tekstkleur van de koptekst in de hero-sectie */
+}
+
+.hero img {
+    width: 100%;
+    height: auto; /* Breedte en hoogte van de afbeelding in de hero-sectie */
+}
+
+.hero .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%); /* Overgangseffect van licht naar donker op de afbeelding */
+}
+
+.hero h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4em; /* Grootte van de koptekst in de hero-sectie */
+    font-family: 'Bernard MT Condensed', sans-serif; /* Lettertype van de koptekst in de hero-sectie */
+    font-weight: lighter; /* Minder dikgedrukt voor de koptekst in de hero-sectie */
+}
+
+.content {
+    padding: 20px;
+    background-color: white; /* Achtergrondkleur van de inhoudssectie */
+    margin: 20px;
+    border-radius: 5px; /* Ronde hoeken van de inhoudssectie */
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #fff;
+    background-color: #fff; /* Achtergrondkleur van de footer */
     position: fixed;
     width: 100%;
-    bottom: 0;
+    bottom: 0; /* Plaatsing van de footer onderaan de pagina */
 }

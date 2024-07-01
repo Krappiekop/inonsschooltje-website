@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Achtergrondkleur van de volledige pagina */
+    background-color: #4D563A; /* Achtergrondkleur van de volledige pagina */
 }
 
 header {
@@ -90,14 +90,28 @@ nav ul li a.active {
     transform: translateX(-50%);
     font-size: 4em; /* Grootte van de koptekst in de hero-sectie */
     font-family: 'Bernard MT Condensed', sans-serif; /* Lettertype van de koptekst in de hero-sectie */
-    font-weight: lighter; /* Minder dikgedrukt voor de koptekst in de hero-sectie */
+    font-weight: normal; /* Minder dikgedrukt voor de koptekst in de hero-sectie */
 }
 
 .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     padding: 20px;
     background-color: white; /* Achtergrondkleur van de inhoudssectie */
     margin: 20px;
     border-radius: 5px; /* Ronde hoeken van de inhoudssectie */
+}
+
+.content-left, .content-right {
+    flex: 1;
+    margin: 10px;
+}
+
+.content-right img {
+    width: 100%;
+    height: auto; /* Breedte en hoogte van de afbeelding in de inhoudssectie */
+    border-radius: 5px; /* Ronde hoeken van de afbeelding */
 }
 
 footer {

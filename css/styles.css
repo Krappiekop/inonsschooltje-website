@@ -2,103 +2,57 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #6B7141; /* Gebruik de kleur uit de tweede afbeelding */
+    background-color: #4D563A; /* Kleur van de tweede afbeelding */
 }
 
 header {
-    background-color: #fff;
-    color: #333;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
 }
 
 .logo img {
-    height: 50px; /* Pas de hoogte aan naar wens */
+    height: 50px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 1em;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #666;
+    font-size: 16px;
 }
 
-.contact-button {
-    background-color: #6B7141;
+.contact-button a {
+    background-color: #4D563A; /* Kleur van de tweede afbeelding */
     color: #fff;
-    padding: 0.5em 1em;
-    border: none;
-    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.hero {
-    background-color: #6B7141; /* Gebruik de kleur uit de tweede afbeelding */
-    color: #fff;
-    text-align: center;
-    padding: 4em 2em;
-}
-
-.hero-content h1 {
-    font-size: 2.5em;
-    margin: 0.5em 0;
-}
-
-.hero-button {
-    background-color: #fff;
-    color: #6B7141;
-    padding: 0.5em 1em;
-    border: none;
-    cursor: pointer;
-    margin-top: 1em;
-}
-
-section {
-    padding: 2em;
-    background-color: #fff;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    margin-top: 1em;
-}
-
-form input, form textarea {
-    padding: 0.5em;
-    margin-top: 0.5em;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-form button {
-    margin-top: 1em;
-    padding: 0.5em;
-    background-color: #6B7141;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.contact-button a:hover {
+    background-color: #3e4532; /* Donkerdere kleur voor hover effect */
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 10px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

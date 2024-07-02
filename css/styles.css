@@ -11,11 +11,16 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #fff; /* Achtergrondkleur van de header */
-    position: relative; /* Voor de underline positionering */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Horizontaal en verticaal centreren van de logo en nav */
 }
 
 .logo img {
     height: 50px; /* Hoogte van het logo in de header */
+    margin-right: 20px; /* Ruimte tussen het logo en de menu-items */
 }
 
 nav ul {
@@ -24,7 +29,6 @@ nav ul {
     margin: 0;
     display: flex;
     gap: 20px; /* Afstand tussen de menu-items */
-    position: relative;
 }
 
 nav ul li {
@@ -52,7 +56,12 @@ nav ul li a.active {
     bottom: -2px;
     height: 2px;
     background: #4D563A; /* Kleur van de lijn */
-    transition: left 0.3s ease, width 0.3s ease;
+    transition: left 0.3s ease, width 0.3s ease; /* NIEUW: Stijl voor de underline */
+}
+
+.contact-button {
+    display: flex;
+    align-items: center; /* Verticaal centreren van de contactknop */
 }
 
 .contact-button a {
@@ -109,35 +118,39 @@ nav ul li a.active {
     margin: 20px auto; /* Auto margin voor centrering en ruimte aan de zijkanten */
     border-radius: 5px; /* Ronde hoeken van de inhoudssectie */
     max-width: 1200px; /* Maximale breedte van de inhoudssectie */
-    height: 400px; /* Vast hoogte voor de inhoudssectie om verticale centrering mogelijk te maken */
 }
 
-.content-left, .content-right {
-    flex: 1;
-    margin: 10px;
+.content-center {
+    text-align: center; /* Tekst centreren */
 }
 
-.content-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Verticaal centreren van de tekst in het linkervak */
+.content-center form {
+    display: inline-block;
+    text-align: left; /* Formulier velden links uitlijnen binnen het gecentreerde formulier */
+    margin-top: 20px;
 }
 
-.content-left h2 {
-    font-size: 24px; /* Grotere tekstgrootte voor de kop */
-    font-weight: 700; /* Dikker fontgewicht voor de kop */
-    margin-bottom: 20px; /* Ruimte onder de kop */
-}
-
-.content-left p {
-    font-size: 16px; /* Standaard tekstgrootte voor de paragraaf */
-    font-weight: 400; /* Normaal fontgewicht voor de paragraaf */
-}
-
-.content-right img {
+.content-center form input[type="text"],
+.content-center form input[type="email"],
+.content-center form textarea {
     width: 100%;
-    height: auto; /* Breedte en hoogte van de afbeelding in de inhoudssectie */
-    border-radius: 5px; /* Ronde hoeken van de afbeelding */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content-center form input[type="submit"] {
+    background-color: #4D563A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content-center form input[type="submit"]:hover {
+    background-color: #3e4532;
 }
 
 footer {

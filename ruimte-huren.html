@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over ons Schooltje</title>
+    <title>Ruimte Verhuur</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet"> <!-- NIEUW: Toegevoegd Shadows Into Light Two -->
+
 </head>
+
 <body>
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="Logo">
         </div>
         <nav>
-            <ul>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="over-ons.html">Over ons Schooltje</a></li>
-                <li><a href="ruimte-huren.html">Ruimte huren</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
+                <li><a href="ruimte-huren.html"  class="active">Ruimte huren</a></li>
                 <li><a href="oldtimer-opslag.html">Oldtimer opslag verhuur</a></li>
             </ul>
+            <div id="underline"></div> <!-- NIEUW: underline div toegevoegd -->
         </nav>
         <div class="contact-button">
             <a href="contact.html">Contact</a>
@@ -25,12 +29,34 @@
     </header>
 
     <main>
-        <h1>Ruimte Huren</h1>
-        <p>Informatie over ruimte huren voor evenementen...</p>
+        <div class="hero">
+            <img src="images/HeaderAfbeelding2.jpg" alt="Ruimte Verhuur">
+            <div class="overlay"></div>
+            <h1>Ruimte Verhuur</h1>
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <h2>Vergaderingen en bijeenkomsten</h2>
+                <p>Het tuinhuis in het voormalig schoolgebouw is een ideale locatie voor vergaderingen en bijeenkomsten. 
+                    Van vergaderlocatie, tot creatieve activiteiten; het is allemaal mogelijk in deze ruimte. Voor meer informatie en mogelijkheden 
+                    graag contact per email.</p>
+            </div>
+            <div class="content-right">
+                <img src="images/Afbeelding5.jpg" alt="Afbeelding">
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Verhuur Gebouw. Alle rechten voorbehouden.</p>
     </footer>
+
 </body>
 </html>
+
+
+
+
+
+
+

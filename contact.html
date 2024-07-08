@@ -33,20 +33,21 @@
             <h1>Contact</h1>
         </div>
         <div class="content">
-            <div class="content-center">
+            <div class="content-left"> <!-- NIEUW: Linker content sectie -->
+                <h2>Contact</h2>
                 <p>Neem gerust contact met ons op voor meer informatie of reserveringen.</p>
-                <h3>Contactgegevens</h3>
-                <p>Adres: Hooge Zwaluwe, gemeente Drimmelen</p>
-                <p>Telefoon: 012-3456789</p>
+                <p>Adres: Adres Onderstraat 4, Hooge Zwaluwe, gemeente Drimmelen</p>
+                <p>Telefoon: 06-10266773</p>
                 <p>Email: info@onschooltje.nl</p>
-                <h3>Contactformulier</h3>
-                <form action="mailto:info@onschooltje.nl" method="post" enctype="text/plain">
+            </div>
+            <div class="content-right"> <!-- NIEUW: Rechter content sectie -->
+                <form action="https://formspree.io/f/mvgponjr" method="POST">
                     <label for="name">Naam:</label><br>
-                    <input type="text" id="name" name="name"><br>
+                    <input type="text" id="name" name="name" required><br>
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br>
+                    <input type="email" id="email" name="email" required><br>
                     <label for="message">Bericht:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
                     <input type="submit" value="Verzenden">
                 </form>
             </div>

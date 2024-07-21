@@ -10,6 +10,7 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap; /* Zorgt ervoor dat items op kleinere schermen kunnen doorbreken naar de volgende regel */
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
@@ -31,6 +32,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Zorgt ervoor dat menu-items kunnen doorbreken naar de volgende regel */
     gap: 20px; /* Afstand tussen de menu-items */
 }
 
@@ -118,6 +120,7 @@ main {
 
 .content {
     display: flex;
+    flex-wrap: wrap; /* Zorgt ervoor dat items kunnen doorbreken naar de volgende regel op kleinere schermen */
     justify-content: space-between; /* NIEUW: Ruimte tussen linker en rechter content secties */
     align-items: flex-start; /* NIEUW: Bovenaan lijnen van de inhoud */
     padding: 20px;
@@ -179,4 +182,35 @@ footer {
     background-color: #fff; /* Achtergrondkleur van de footer */
     width: 100%;
     bottom: 0; /* Plaatsing van de footer onderaan de pagina */
+}
+
+/* Media Queries voor mobiel */
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px; /* Verklein het logo voor kleinere schermen */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Verklein de afstand tussen menu-items */
+    }
+
+    .contact-button {
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 3em; /* Verklein de koptekst in de hero-sectie */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-left,
+    .content-right {
+        width: 100%; /* Zorg ervoor dat de content-secties 100% breedte hebben op kleinere schermen */
+        margin-bottom: 20px;
+    }
 }

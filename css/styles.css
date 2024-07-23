@@ -1,3 +1,8 @@
+/* Basisopmaak voor body en algemene elementen */
+html, body {
+    overflow-x: hidden; /* NIEUW: Voorkom horizontale overstroming */
+}
+
 body {
     font-family: 'Aptos Serif', sans-serif;
     margin: 0;
@@ -10,11 +15,11 @@ body {
 
 header {
     display: flex;
-    flex-wrap: wrap; /* Zorgt ervoor dat items op kleinere schermen kunnen doorbreken naar de volgende regel */
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #A4A0D0; /* Achtergrondkleur van de header */
+    position: relative; /* Zorg ervoor dat de positionering van de header correct is voor z-index */
 }
 
 .logo {
@@ -27,13 +32,30 @@ header {
     margin-right: 20px; /* Ruimte tussen het logo en de menu-items */
 }
 
+nav {
+    position: relative;
+}
+
+nav button {
+    display: none; /* Verberg de menu knop op grotere schermen */
+    background: none;
+    border: none;
+    height: 35px; /* Zorg ervoor dat de knop dezelfde hoogte heeft als het logo */
+}
+
+nav button img {
+    height: 100%; /* Zorg ervoor dat de afbeelding de volledige hoogte van de knop gebruikt */
+    width: auto;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Zorgt ervoor dat menu-items kunnen doorbreken naar de volgende regel */
-    gap: 20px; /* Afstand tussen de menu-items */
+    gap: 20px;
+    position: relative; /* NIEUW: Zorg ervoor dat het menu correct wordt gepositioneerd */
+    z-index: 999; /* NIEUW: Zorg ervoor dat het menu boven andere elementen ligt */
 }
 
 nav ul li {
@@ -56,33 +78,13 @@ nav ul li a.active {
     color: #272727; /* Kleur van de actieve menukop */
 }
 
-#underline {
-    position: absolute;
-    bottom: -2px;
-    height: 2px;
-    background: #4D563A; /* Kleur van de lijn */
-    transition: left 0.3s ease, width 0.3s ease; /* Stijl voor de underline */
-}
-
-.contact-button {
-    display: flex;
-    align-items: center; /* Verticaal centreren van de contactknop */
-}
-
-.contact-button a {
-    background-color: #4D563A; /* Achtergrondkleur van de contactknop */
-    color: #fff; /* Tekstkleur van de contactknop */
+nav ul li a.button {
+    background-color: #4D563A;
+    color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px; /* Ronde hoeken van de contactknop */
-    font-size: 16px;
-    font-weight: bold; /* Contactknop dikgedrukt maken */
-    transition: background-color 0.3s ease; /* Soepele overgang voor de achtergrondkleur bij hover */
+    border-radius: 5px;
 }
 
-.contact-button a:hover {
-    background-color: #3e4532; /* Donkerdere kleur voor hover effect op de contactknop */
-}
 
 .hero {
     position: relative;
@@ -92,7 +94,9 @@ nav ul li a.active {
 
 .hero img {
     width: 100%;
-    height: auto; /* Breedte en hoogte van de afbeelding in de hero-sectie */
+    height: 300px; /* Breedte en hoogte van de afbeelding in de hero-sectie */
+    max-height: 300px; /* Voeg een maximale hoogte toe aan de afbeelding */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding goed wordt ingekort aan de zijkanten */
 }
 
 .hero .overlay {
@@ -100,7 +104,7 @@ nav ul li a.active {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    height: 300px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%); /* Overgangseffect van licht naar donker op de afbeelding */
 }
 
@@ -120,7 +124,6 @@ main {
 
 .content {
     display: flex;
-    flex-wrap: wrap; /* Zorgt ervoor dat items kunnen doorbreken naar de volgende regel op kleinere schermen */
     justify-content: space-between; /* NIEUW: Ruimte tussen linker en rechter content secties */
     align-items: flex-start; /* NIEUW: Bovenaan lijnen van de inhoud */
     padding: 20px;
@@ -133,10 +136,16 @@ main {
 .content-left,
 .content-right {
     width: 48%; /* NIEUW: Breedte van de linker- en rechterinhoud */
+    box-sizing: border-box;
 }
 
 .content-left {
     text-align: left; /* NIEUW: Tekst links uitlijnen */
+}
+
+.content-right img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 .content-right {
@@ -182,26 +191,47 @@ footer {
     background-color: #fff; /* Achtergrondkleur van de footer */
     width: 100%;
     bottom: 0; /* Plaatsing van de footer onderaan de pagina */
+    box-sizing: border-box; /* Inclusief padding en border in de elementbreedte */
 }
 
 /* Media Queries voor mobiel */
 @media (max-width: 768px) {
-    .logo img {
-        height: 40px; /* Verklein het logo voor kleinere schermen */
+    nav button {
+        display: block; /* Toon de menu knop op kleinere schermen */
+        height: 50px; /* Zorg ervoor dat de knop dezelfde hoogte heeft als het logo */
+        z-index: 1000; /* Zorg ervoor dat de knop voor andere elementen komt */
     }
 
     nav ul {
+        display: none; /* Verberg de lijst standaard op kleinere schermen */
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px; /* Verklein de afstand tussen menu-items */
+        gap: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* NIEUW: Zorg ervoor dat het menu boven andere elementen ligt */
     }
 
-    .contact-button {
-        margin-top: 10px;
+    nav ul.show {
+        display: flex;
     }
 
     .hero h1 {
         font-size: 3em; /* Verklein de koptekst in de hero-sectie */
+    }
+
+    .hero img {
+        height: 300px; /* Adjust height for smaller screens */
+        max-height: 300px; /* Adjust max height for smaller screens */
+    }
+
+    .hero .overlay {
+        height: 300px; /* Adjust overlay height for smaller screens */
     }
 
     .content {
@@ -212,5 +242,21 @@ footer {
     .content-right {
         width: 100%; /* Zorg ervoor dat de content-secties 100% breedte hebben op kleinere schermen */
         margin-bottom: 20px;
+    }
+
+    .content-right img {
+        width: 100%;
+        height: auto; /* Zorg ervoor dat de afbeelding de verhoudingen behoudt */
+    }
+
+    .content-right form {
+        width: 100%;
+    }
+
+    .content-right form input,
+    .content-right form textarea,
+    .content-right form button {
+        width: 100%; /* Zorg ervoor dat de velden de volledige breedte van hun container gebruiken */
+        box-sizing: border-box; /* Zorg ervoor dat padding correct wordt berekend */
     }
 }
